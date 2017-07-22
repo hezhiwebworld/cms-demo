@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+      <leftNav></leftNav>
+      <Pos></Pos>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import leftNav from '@/components/common/leftNav'
+import Pos from './components/page/pos'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    leftNav,
+    Pos
   }
 }
 </script>
@@ -23,6 +25,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+i{
+  color: black;
 }
 </style>
