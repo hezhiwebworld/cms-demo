@@ -1,6 +1,6 @@
 # testapiproxy
 
-> A Vue.js project
+> 技术栈 vue2.0    vue-router    vue-cli   axios  element-ui
 
 ## Build Setup
 

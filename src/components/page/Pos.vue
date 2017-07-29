@@ -21,8 +21,8 @@
              </div>
              <div class="btn">
                <el-button type="warning">挂单</el-button>
-               <el-button type="danger">删除</el-button>
-               <el-button type="success">结账</el-button>
+               <el-button type="danger" @click="reduceAll">删除</el-button>
+               <el-button type="success" @click="checkOut">结账</el-button>
              </div>
           </el-tab-pane>
           <!--挂单-->
@@ -184,17 +184,41 @@ export default {
                  
                 console.log(this.tableData)
             }
-            //计算汇总价格和数量
-            this.tableData.forEach((ele)=>{
-                this.totalCount += ele.count;
-                this.totalMoney = this.totalMoney + ( ele.price * ele.count )
-            });
-
-
+            this.getAllMoney()
       },
       //删除商品
       reduceOrderList(goods){
          this.tableData = this.tableData.filter( any => any.goodsId != goods.goodsId )
+         this.getAllMoney()
+      },
+      //删除所有商品
+      reduceAll(){
+          this.tableData =[];
+          this.getAllMoney()
+      },
+      //计算总数
+      getAllMoney(){
+          this.totalCount=0;
+          this.totalMoney=0;
+          if(this.tableData){
+             this.tableData.forEach((ele)=>{
+                this.totalCount += ele.count;
+                this.totalMoney = this.totalMoney + ( ele.price * ele.count )
+            });
+          }
+      },
+      //结账
+      checkOut(){
+          if(this.totalCount != 0){
+               this.tableData =[];
+                this.getAllMoney()
+              this.$message({
+                  message : 'laallallallaalalala',
+                  type: 'success'
+              })
+          }else{
+              this.$message.error('不要再点击了')
+          }
       }
   },
   
@@ -206,6 +230,7 @@ export default {
         },
         deep:true
       },
+
   }
 }
 </script>
