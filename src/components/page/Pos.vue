@@ -5,11 +5,11 @@
         <el-tabs>
           <!--点餐-->
           <el-tab-pane label="点餐">
-             <el-table :data="tableData"  border='1' style="width:100%;">
-               <el-table-column props="goosname" label="商品名称"></el-table-column>
-               <el-table-column props="count" label="数量" width="70"></el-table-column>
-               <el-table-column props="price" label="金额" width="70"></el-table-column>
-               <el-table-column props="goosname" label="操作" width="100" fixed="right">
+             <el-table :data= 'tableData'   style="width:100%;">
+               <el-table-column  label="商品名称"></el-table-column>
+               <el-table-column  label="数量" width="70"></el-table-column>
+               <el-table-column  label="金额" width="70"></el-table-column>
+               <el-table-column  label="操作" width="100" fixed="right">
                  <template scope="scope">
                     <el-button type="text" size="small">删除</el-button>
                     <el-button type="text" size="small">增加</el-button>
@@ -33,7 +33,7 @@
           </el-tab-pane>
         </el-tabs>
       </el-col>
-       <el-col :span='15'>
+       <el-col :span='14' >
           <div class="goods">
             <div class="title">常用商品</div>
             <div class="goods-list">

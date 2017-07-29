@@ -1,7 +1,8 @@
 <template>
   <div id="app">
       <leftNav></leftNav>
-      <Pos></Pos>
+     <Pos></Pos>
+     
   </div>
 </template>
 
