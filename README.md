@@ -19,3 +19,9 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+1 解决object.assign()无法触发视图刷新的bug
+
+```js
+	let newGoods = Object.assign({},goods,{count:1})  //加一个空对象---详细请见官网响应式原理
+```

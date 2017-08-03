@@ -172,12 +172,12 @@ export default {
             }else{
                 //在这里面添加
                 //let newGoods = Object.assign(goods,{count:1})
-                 let newGoods = {
-                     goodsId:goods.goodsId,
-                     goodsName:goods.goodsName,
-                     price:goods.price,
-                     count:1
-                }
+                //  let newGoods = {
+                //      goodsId:goods.goodsId,
+                //      goodsName:goods.goodsName,
+                //      price:goods.price,
+                //      count:1
+                // }
                 this.tableData.push(newGoods)
 
                 //this.$set(this.tableData,newGoods)
